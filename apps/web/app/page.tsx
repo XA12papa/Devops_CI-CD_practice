@@ -7,7 +7,9 @@ export default async function Home() {
 
   return (
     <div>
+       UserName :
       {user?.username}
+        Password:
       {user?.password}
       <br />
       <div>
