@@ -18,8 +18,4 @@ jobs:
             echo "${{secrets.KNOWN_HOST}}" &>  /home/runner/.ssh/known_hosts
 
             chmod 700 /home/runner/ssh_key
-            ssh -i ~/ssh_key ubuntu@ec2-43-204-211-86.ap-south-1.compute.amazonaws.com -t "cd Devops_CI-CD_practice/ && git pull origin main &&
-            export PATH=/home/ubuntu/.nvm/versions/node/v22.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin &&
-            npm install -g pnpm &&
-            pnpm run build &&
-            pm2 restart all "
+            ssh -i ~/ssh_key ubuntu@ec2-3-111-57-115.ap-south-1.compute.amazonaws.com -t "cd Devops_CI-CD_practice/ && git pull origin main &&
