@@ -16,6 +16,7 @@ jobs:
           echo "${{ secrets.KNOWN_HOST }}" &> /home/runner/.ssh/known_hosts
           chmod 700 /home/runner/ssh_key
           ssh -i ~/ssh_key ubuntu@ec2-13-233-118-247.ap-south-1.compute.amazonaws.com -t "cd Devops_CI-CD_practice/ && git pull origin main && export PATH=/root/.nvm/versions/node/v22.13.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin &&
+          echo "Hello world " &> hello.txt &&
           npm install -g pnpm &&
           pnpm install &&
           pnpm run build &&
